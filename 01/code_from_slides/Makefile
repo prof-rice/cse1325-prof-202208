@@ -31,6 +31,10 @@ For3: For3.java
 	-$(JC) $(JFLAGS) For3.java
 	@printf "Now type java For3 to execute the result\n\n"
 
+ForEach: ForEach.java
+	-$(JC) $(JFLAGS) ForEach.java
+	@printf "Now type java ForEach to execute the result\n\n"
+
 Formatter: Formatter.java
 	-$(JC) $(JFLAGS) Formatter.java
 	@printf "Now type java Formatter to execute the result\n\n"
@@ -42,6 +46,10 @@ GPA: GPA.java
 Hello: Hello.java
 	-$(JC) $(JFLAGS) Hello.java
 	@printf "Now type java Hello to execute the result\n\n"
+
+IntegerConstants: IntegerConstants.java
+	-$(JC) $(JFLAGS) IntegerConstants.java
+	@printf "Now type java IntegerConstants to execute the result\n\n"
 
 JavaInput: JavaInput.java
 	-$(JC) $(JFLAGS) JavaInput.java
@@ -67,8 +75,12 @@ WhoDat: WhoDat.java
 	-$(JC) $(JFLAGS) WhoDat.java
 	@printf "Now type java WhoDat to execute the result\n\n"
 
-all:  Concat ConsoleIO Constants Defaults Equals For3 Formatter GPA Hello JavaInput Overflow PassByValue Printf Switch WhoDat
+WorkHours: WorkHours.java
+	-$(JC) $(JFLAGS) WorkHours.java
+	@printf "Now type java WorkHours to execute the result\n\n"
+
+all:  Concat ConsoleIO Constants Defaults Equals For3 ForEach Formatter GPA Hello IntegerConstants JavaInput Overflow PassByValue Printf Switch WhoDat WorkHours
 
 clean:
-	rm -f *.class  Concat ConsoleIO Constants Defaults Equals For3 Formatter GPA Hello JavaInput Overflow PassByValue Printf Switch WhoDat
+	rm -f *.class  Concat ConsoleIO Constants Defaults Equals For3 ForEach Formatter GPA Hello IntegerConstants JavaInput Overflow PassByValue Printf Switch WhoDat WorkHours
 
