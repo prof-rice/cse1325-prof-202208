@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class StackDemo {
+public class StackExplorer {
     private static java.io.Console console = System.console();
     public static void main(String[] args) {
         // Declare a Stack like an ArrayList
