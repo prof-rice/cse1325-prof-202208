@@ -39,24 +39,31 @@ class Controller {
                 view.printGrid();                                 // Show the gameboard
                 System.out.print("Command (1 to 9, 0 to exit)? ");
                 command = (char)System.in.read();                 // Read the next character
-                executeCommand(command);                          // Execute the requested command
-                grid.animateRobots();                             // Move robots toward the player
-                grid.detectCollisions();                          // Kill any robot that crashes
+                if (executeCommand(command)) {                    // Execute the requested command
+                    grid.animateRobots();                         // Move robots toward the player
+                    grid.detectCollisions();                      // Kill any robot that crashes 
+                }
             } catch(Exception e) {
+                System.err.println("##### ERROR: " + e);
             }
         }
         view.printFinalGrid();                                    // Show final gameboard with results
     }
-    private void executeCommand(char cmd) {
-        if (cmd == '1') {grid.movePlayer(Direction.down_left ); }
-        if (cmd == '2') {grid.movePlayer(Direction.down      ); }
-        if (cmd == '3') {grid.movePlayer(Direction.down_right); }
-        if (cmd == '4') {grid.movePlayer(Direction.left      ); }
-        if (cmd == '5') {grid.movePlayer(Direction.stay      ); }
-        if (cmd == '6') {grid.movePlayer(Direction.right     ); }
-        if (cmd == '7') {grid.movePlayer(Direction.up_left   ); }
-        if (cmd == '8') {grid.movePlayer(Direction.up        ); }
-        if (cmd == '9') {grid.movePlayer(Direction.up_right  ); }
+    private boolean executeCommand(char cmd) {
+        boolean valid = true;
+        switch(cmd) {
+            case '1', 'z' -> grid.movePlayer(Direction.down_left );
+            case '2', 'x' -> grid.movePlayer(Direction.down      );
+            case '3', 'c' -> grid.movePlayer(Direction.down_right);
+            case '4', 'a' -> grid.movePlayer(Direction.left      );
+            case '5', 's' -> grid.movePlayer(Direction.stay      );
+            case '6', 'd' -> grid.movePlayer(Direction.right     );
+            case '7', 'q' -> grid.movePlayer(Direction.up_left   );
+            case '8', 'w' -> grid.movePlayer(Direction.up        );
+            case '9', 'e' -> grid.movePlayer(Direction.up_right  );
+            default       -> valid = false;
+        }
+        return valid;
     }
     
     private Grid grid;

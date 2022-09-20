@@ -57,21 +57,40 @@ public class View {
         System.out.println("============\n\rROVING ROBOT\n\r============\n\n\r");
     }
     private void printHelp() {
-        System.out.print(
+        System.out.print( /* Text Blocks work with Java 17 
+        
+           """
+           Use the numeric keypad to maneuver your robot Ralph (R)
+             and avoid the evil robots (X).
+           You may take one step in any direction:
+                       7  8  9              q  w  e
+                                                     ⟍ |⟋                                      ⟍|⟋
+                       4--5--6    ?--help   a--s--d
+                                                      ⟋|⟍                                     ⟋|⟍
+                       1  2  3              z  x  c
+                           exit--0  .--teleport
+            
+            The evil robots will always take one step toward you.
+            Collisions destroy those involved, and leave behind
+              a lethal debris field (*). Good luck!
+            """
+            */
+            
             "Use the numeric keypad to maneuver your robot Ralph (R)\n\r" +
             "  and avoid the evil robots (X).                       \n\r" +
             "                                                       \n\r" +
             "You may take one step in any direction:                \n\r" +
-            "            7  8  9                                    \n\r" +
-            "             \\ | /                                    \n\r" +
-            "            4--5--6    ?--help                         \n\r" +
-            "             / | \\                                    \n\r" +
-            "            1  2  3                                    \n\r" +
-            "       exit--0  .--teleport                            \n\r" +
+            "            7  8  9                q  w  e             \n\r" +
+            "             \\ | /                  \\ | /              \n\r" +
+            "            4--5--6    ?--help     a--s--d             \n\r" +
+            "             / | \\                  / | \\              \n\r" +
+            "            1  2  3                z  x  c             \n\r" +
+            "                 exit--0  .--teleport                  \n\r" +
             "                                                       \n\r" +
             "The evil robots will always take one step toward you.  \n\r" +
             "Collisions destroy those involved, and leave behind    \n\r" +
             "  a lethal debris field (*). Good luck!                \n\r"
+           
        );
     }
 

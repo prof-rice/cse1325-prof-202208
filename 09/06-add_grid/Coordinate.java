@@ -51,7 +51,7 @@ public class Coordinate {
     
     protected void validate() {
         if(x < 0 || x > maxX) throw new IllegalArgumentException("Invalid x: " + x);
-        if(y < 0 || y > maxX) throw new IllegalArgumentException("Invalid y: " + y);
+        if(y < 0 || y > maxY) throw new IllegalArgumentException("Invalid y: " + y);
     }
         
     protected int x;
