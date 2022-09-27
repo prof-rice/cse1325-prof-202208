@@ -1,0 +1,3 @@
+interface SortableInterface {
+    void sort();
+}
