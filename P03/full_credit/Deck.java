@@ -22,3 +22,18 @@ public class Deck {
     public class DeckEmpty extends IndexOutOfBoundsException { }
     private Stack<Card> deck = new Stack<>();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
