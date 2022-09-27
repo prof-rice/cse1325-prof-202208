@@ -1,5 +1,5 @@
 public class Coin extends Cash {
-    public Coin(String name, double value) {
+    public Coin(String name, double value, double diameter) {
         super(name, value);
         this.diameter = diameter;
     }
@@ -7,5 +7,5 @@ public class Coin extends Cash {
     public String toString() {
         return 100*value + "¢ coin (" + diameter + " diameter)";  
     }
-    double diameter; // in mm
+    private double diameter; // in mm
 }
