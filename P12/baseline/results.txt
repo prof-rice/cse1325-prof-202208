@@ -1,0 +1,127 @@
+====================
+HOMEWORK P12 RESULTS
+====================
+
+Fall 2022
+
+
+FULL CREDIT
+===========
+
+NOTE: These are measurements which may vary plus your opinions which may vary a LOT. We won't grade for "correctness", just completeness.
+
+QUESTION 1: What Solver command line arguments did you use to achieve a 30 to 45 second runtime? Note: We're only interested in the "real" seconds for this question.
+
+
+
+
+
+
+
+QUESTION 2: Provide the full output (including the time command) for your program, with 1 to 16 threads. **Ensure that the result is the same for all 16 runs.** (The root found may vary in the least significant digits.) With bash, you can run all of these with a single command if you like, adding whatever Solver command line arguments you identified in QUESTION 1: 
+
+for i in {1..16} ; do time java Solver --threads $i poly4.poly ; done
+
+
+
+Example Timing (first 2 of 16 runs only on Antares - REPLACE this with your timing for 1 to 16 threads):
+
+ricegf@antares$ for i in {1..16} ; do time java Solver --threads $i polys/*.poly ; done
+Loading polys/poly2a.poly... done
+Loading polys/poly2.poly... done
+Loading polys/poly3.poly... done
+Loading polys/poly4a.poly... done
+Loading polys/poly4.poly... done
+Loading polys/untitled.poly... done
+
+threads = 1: range -1000.0 to 1000.0, 1.0E8 slices, precision = 1.0E-6
+
+polys/poly4a.poly: +1.00000x^4-26.0000x^2+25.0000x^0 has 4 roots
+  [-4.999999591980622, -0.9999995919655189, 1.0000004080359182, 5.0000004080510205]
+
+polys/untitled.poly: +1.00000x^4-26.0000x^2+25.0000x^0 has 4 roots
+  [-4.999999591980622, -0.9999995919655189, 1.0000004080359182, 5.0000004080510205]
+
+polys/poly3.poly: -4.00000x^3+6.00000x^2+2.00000x^1+0.00000x^0 has 3 roots
+  [-0.28077659196479976, 4.080351996384489E-7, 1.7807764080323634]
+
+polys/poly2.poly: +1.00000x^2-5.85988x^1+8.53975x^0 has 2 roots
+  [2.7182834080360734, 3.1415964080388483]
+
+polys/poly2a.poly: +1.00000x^2-0.423320x^1-8.53975x^0 has 2 roots
+  [-2.7182795919656733, 3.141600408038846]
+
+polys/poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999591886702, -0.9999995919655189, 5.300000408052986, 17.000000407729956]
+
+
+real	0m36.588s
+user	0m36.703s
+sys	0m0.012s
+
+Loading polys/poly2a.poly... done
+Loading polys/poly2.poly... done
+Loading polys/poly3.poly... done
+Loading polys/poly4a.poly... done
+Loading polys/poly4.poly... done
+Loading polys/untitled.poly... done
+
+threads = 2: range -1000.0 to 1000.0, 1.0E8 slices, precision = 1.0E-6
+
+polys/poly4a.poly: +1.00000x^4-26.0000x^2+25.0000x^0 has 4 roots
+  [-4.999999591980622, -0.9999995919655189, 0.999999500000719, 4.999999500015823]
+
+polys/untitled.poly: +1.00000x^4-26.0000x^2+25.0000x^0 has 4 roots
+  [-4.999999591980622, -0.9999995919655189, 0.999999500000719, 4.999999500015823]
+
+polys/poly3.poly: -4.00000x^3+6.00000x^2+2.00000x^1+0.00000x^0 has 4 roots
+  [-0.28077659196479976, 4.080351996384489E-7, 5.0E-7, 1.780776499997164]
+
+polys/poly2.poly: +1.00000x^2-5.85988x^1+8.53975x^0 has 2 roots
+  [2.7182835000008736, 3.1415965000036485]
+
+polys/poly2a.poly: +1.00000x^2-0.423320x^1-8.53975x^0 has 2 roots
+  [-2.7182795919656733, 3.141599500003649]
+
+polys/poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999591886702, -0.9999995919655189, 5.299999500017789, 17.000000499694757]
+
+
+real	0m18.284s
+user	0m28.978s
+sys	0m0.024s
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+
+
+
+
+
+
+
+
+QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+
+
+
+
+
+
+
+
+
+BONUS
+=====
+
+QUESTION 5: Time your version of ThreadedSolver as you did for the full credit version. Is this additional layer of threading faster, slower, or roughly equivalent in performance? Why?
+
+
+
+
+
+YOUR Timing:
+
+
+
+
